@@ -1,5 +1,7 @@
 .menu {
-  max-width: 240px;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
   padding: 40px 0 0 0;
   font-family: Open Sans, sans-serif;
@@ -35,6 +37,10 @@
         height: 25px;
       }
     }
+  }
+
+  &__inner {
+    margin: 0 50px 0 0;
   }
 
   &__item {
