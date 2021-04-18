@@ -1,0 +1,34 @@
+// Colors
+
+// default
+
+$color-default-black:             #000000;
+$color-default-white:             #ffffff;
+
+// base
+
+$color-light-grey:               #D6D6D6;
+$color-ghost-white:              #F3F4F9;
+$color-sky:                      #34ABE0;
+$color-nero:                     #262626;
+$color-rider:                    #333333;
+
+
+// Typography
+
+$font-family--sans:       "Open Sans", "Arial", sans-serif; 
+$font-family--roboto:     "Roboto", "Arial", sans-serif; 
+
+
+// Animation
+
+$default-transition-settings:       .3s ease;
+
+
+// Viewports
+
+$viewport--sm:                      320px;
+$viewport--md:                      768px;
+$viewport--lg:                      1024px;
+$viewport--xl:                      1440px;
+$viewport--xxl:                     1920px;
