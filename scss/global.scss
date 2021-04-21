@@ -53,8 +53,13 @@ li {
 
 .container {
   padding: 0 60px;
+  margin: 0 0 0 227px;
 
   @include viewport--lg {
     padding: 0 25px;
+  }
+
+  @include viewport--md {
+    margin: 0 0 0 104px;
   }
 }

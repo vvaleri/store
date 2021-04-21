@@ -59,6 +59,7 @@ li {
 
 .container {
   padding: 0 60px;
+  margin: 0 0 0 227px;
 }
 
 .menu {
@@ -86,6 +87,9 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .menu__logo span {
@@ -147,8 +151,7 @@ li {
 }
 
 .header {
-  margin: 0 0 0 227px;
-  padding: 45px 0 40px 60px;
+  padding: 45px 0 40px;
   font-family: "Open Sans", "Arial", sans-serif;
 }
 
@@ -186,8 +189,23 @@ li {
 }
 
 @media (max-width: 768px) {
+  .container {
+    margin: 0 0 0 104px;
+  }
+
   .menu {
     max-width: 104px;
+    padding: 0;
+  }
+
+  .menu__head {
+    margin: 0;
+  }
+
+  .menu__logo {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 
   .menu__logo span {
@@ -199,12 +217,13 @@ li {
     height: 25px;
   }
 
+  .menu__inner {
+    margin: 0;
+  }
+
   .menu__button {
     display: block;
-    margin: 0 0 0 30px;
-    padding: 25px 17px 25px 10px;
-    background-color: #F3F4F9;
-    border-radius: 0px 80px 80px 0px;
+    margin: 0 0 0 38px;
   }
 
   .menu__burger {
@@ -212,6 +231,7 @@ li {
     width: 26px;
     height: 20px;
     display: block;
+    top: -70px;
   }
 
   .menu__burger::before,
@@ -262,5 +282,11 @@ li {
 
   .link-menu__text {
     display: none;
+  }
+
+  .header__title {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
