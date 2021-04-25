@@ -63,3 +63,11 @@ li {
     margin: 0 0 0 104px;
   }
 }
+
+.main-content {
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+}

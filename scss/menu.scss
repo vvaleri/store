@@ -64,6 +64,14 @@
 
     &.active {
       border-left: 3px solid $color-sky;
+
+      .link-menu__icon {
+        stroke: $color-sky;
+      }
+
+      .link-menu__text {
+        color: $color-sky;
+      }
     }
 
     &:last-child {
@@ -140,10 +148,6 @@
   &__icon {
     margin: 0 10px 0 0;
     stroke: $color-default-black;
-
-    &.active {
-      stroke: $color-sky;
-    }
   }
 
   &__text {
@@ -152,10 +156,6 @@
 
     @include viewport--md {
       display: none;
-    }
-    
-    &.active {
-      color: $color-sky;
     }
   }
 }
