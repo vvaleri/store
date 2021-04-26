@@ -88,6 +88,7 @@ li {
   display: flex;
   margin: 0 0 50px 0;
   padding: 0 0 0 40px;
+  position: relative;
 }
 
 .menu__logo {
@@ -135,6 +136,9 @@ li {
 
 .menu__button {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
 }
 
 .menu__burger {
@@ -205,7 +209,7 @@ li {
   }
 
   .menu {
-    max-width: 104px;
+    min-width: 104px;
     padding: 0;
   }
 
@@ -214,9 +218,7 @@ li {
   }
 
   .menu__logo {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    margin: 40px 0 70px;
   }
 
   .menu__logo span {
@@ -229,12 +231,17 @@ li {
   }
 
   .menu__inner {
-    margin: 0;
+    margin: 0 25px 0 0;
+  }
+
+  .menu__inner.active .link-menu__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .menu__button {
     display: block;
-    margin: 0 0 0 38px;
   }
 
   .menu__burger {
@@ -267,7 +274,7 @@ li {
     -webkit-transform: rotate(45deg);
         -ms-transform: rotate(45deg);
             transform: rotate(45deg);
-    top: 6px;
+    top: 8px;
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     -o-transition: transform .3s;
@@ -279,7 +286,7 @@ li {
     -webkit-transform: rotate(-45deg);
         -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
-    bottom: 6px;
+    bottom: 9px;
     -webkit-transition: -webkit-transform .3s;
     transition: -webkit-transform .3s;
     -o-transition: transform .3s;

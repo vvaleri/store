@@ -8,7 +8,7 @@
   background-color: $color-ghost-white;
 
   @include viewport--md {
-    max-width: 104px;
+    min-width: 104px;
     padding: 0;
   }
 
@@ -16,9 +16,11 @@
     display: flex;
     margin: 0 0 50px 0;
     padding: 0 0 0 40px;
+    position: relative;
 
     @include viewport--md {
       margin: 0;
+     
     }
   }
 
@@ -28,7 +30,7 @@
     align-self: center;
 
     @include viewport--md {
-      align-items: flex-start;
+      margin: 40px 0 70px;
     }
 
     span {
@@ -54,7 +56,14 @@
     margin: 0 50px 0 0;
 
     @include viewport--md {
-      margin: 0;
+      margin: 0 25px 0 0;
+
+      &.active {
+
+        .link-menu__text {
+          display: flex;
+        }
+      }
     }
   }
 
@@ -81,13 +90,13 @@
 
   &__button {
     display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
 
     @include viewport--md {
       display: block;
-      margin: 0 0 0 38px;
-      // padding: 25px 17px 25px 10px;
-      // background-color: $color-ghost-white;
-   
+      
     }
   }
 
@@ -122,13 +131,13 @@
 
       &.active::before {
         transform: rotate(45deg);
-        top: 6px;
+        top: 8px;
         transition: transform .3s;
       }
 
       &.active::after {
         transform: rotate(-45deg);
-        bottom: 6px;
+        bottom: 9px;
         transition: transform .3s;
       }
 
@@ -136,7 +145,6 @@
         display: none;
       }
     }
-
 
   }
 }
