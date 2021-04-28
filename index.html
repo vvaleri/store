@@ -65,19 +65,34 @@
         </ul>
       </nav>
     </div>
-    <div class="container">
-      <header class="header">
-        <h1 class="header__title"></h1>
-        <div class="header__search">
-          <input type="text" placeholder="Какой магазин вам нужен?">
+    <header class="header container">
+      <h1 class="header__title"></h1>
+      <div class="header__search">
+        <input type="text" placeholder="Какой магазин вам нужен?">
+      </div>
+    </header>
+    <main class="container">
+      <div class="catalog main-content active" data-menu="catalog">
+        <div class="main-card">
+          <div class="main-card__text">
+            <div class="main-card__head">
+              <h2 class="main-card__title">пробка на мира</h2>
+              <p class="main-card__sign">Вечер для двоих</p>
+            </div>
+            <div class="main-card__offer"> <span class="main-card__discount">-50%</span>
+              <p class="main-card__service">СКИДКА</p>
+            </div>
+          </div>
+          <div class="main-card__img">
+            <img src="img/card-img-1.png" />
+          </div>
         </div>
-      </header>
-      <div class="catalog main-content active" data-menu="catalog">каталог</div>
+      </div>
       <div class="health main-content" data-menu="health">Здоровье</div>
       <div class="beauty main-content" data-menu="beauty">Красота</div>
       <div class="recreation main-content" data-menu="recreation">Развлечения</div>
       <div class="auto main-content" data-menu="auto">Авто</div>
-    </div>
+    </main>
   </div>
   <script src="js/bundle.min.js">
   </script>

@@ -1,3 +1,5 @@
+include pug/mixins
+
 doctype html
 html(lang="ru")
     head
@@ -8,8 +10,8 @@ html(lang="ru")
     body
         .wrapper
             include pug/menu
-            .container
-                include pug/header
+            include pug/header
+            main.container
                 include pug/catalog
                 include pug/health
                 include pug/beauty

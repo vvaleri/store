@@ -1,0 +1,11 @@
+mixin mainCard(title, sign, discount, service, path)
+    .main-card 
+        .main-card__text
+            .main-card__head 
+                h2.main-card__title= title
+                p.main-card__sign= sign
+            .main-card__offer 
+                span.main-card__discount= discount 
+                p.main-card__service= service
+        .main-card__img
+            img(src="img/" + path)
