@@ -1,4 +1,4 @@
-mixin mainCard(title, sign, discount, service, path)
+mixin mainCard(title, sign, discount, service, webp, webp2, path, path2)
     .main-card 
         .main-card__text
             .main-card__head 
@@ -8,4 +8,6 @@ mixin mainCard(title, sign, discount, service, path)
                 span.main-card__discount= discount 
                 p.main-card__service= service
         .main-card__img
-            img(src="img/" + path)
+            picture 
+                source(srcset="img/" + webp + " 1x" + "," + "img/" + webp2 + " 2x" type="image/webp")
+                img(src="img/" + path srcset="img/" + path2 + " 2x")

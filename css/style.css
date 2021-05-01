@@ -58,17 +58,24 @@ main {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
-  padding: 0 60px;
+  padding: 0 55px 0 60px;
   margin: 0 0 0 240px;
 }
 
 .main-content {
   display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: calc(100% + 20px);
   padding-top: 40px;
+  margin-bottom: -20px;
 }
 
 .main-content.active {
@@ -214,12 +221,18 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: calc(33.3% - 20px);
+  margin: 0 20px 20px 0;
   position: relative;
   background-color: #ffffff;
   border-radius: 10px;
   border: 1px solid #ffffff;
   -webkit-box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  -webkit-transition: border 0.3s ease;
+  -o-transition: border 0.3s ease;
+  transition: border 0.3s ease;
+  cursor: pointer;
 }
 
 .main-card:hover {
