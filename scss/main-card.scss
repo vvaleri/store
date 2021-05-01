@@ -1,17 +1,23 @@
 .main-card {
   display: flex;
+  flex: 0 0 347px;
+  justify-content: space-between;
   position: relative;
   background-color: $color-default-white;
   border-radius: 10px;
-  border: 1px solid $color-alizarin;
+  border: 1px solid $color-default-white;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, .15);
-  
+
+  &:hover {
+    border: 1px solid $color-alizarin;
+  }
+
   &__text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 16px 0 16px 20px;
-
+    position: relative;
   }
 
   &__title,
