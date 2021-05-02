@@ -1,5 +1,5 @@
-mixin mainCard(title, sign, discount, service, webp, webp2, path, path2)
-    .main-card 
+mixin mainCard(title, sign, discount, service, webp, webp2, path, path2, alt)
+    a(href="#").main-card 
         .main-card__text
             .main-card__head 
                 h2.main-card__title= title
@@ -10,4 +10,4 @@ mixin mainCard(title, sign, discount, service, webp, webp2, path, path2)
         .main-card__img
             picture 
                 source(srcset="img/" + webp + " 1x" + "," + "img/" + webp2 + " 2x" type="image/webp")
-                img(src="img/" + path srcset="img/" + path2 + " 2x")
+                img(src="img/" + path srcset="img/" + path2 + " 2x" alt= alt)
