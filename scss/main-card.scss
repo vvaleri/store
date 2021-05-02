@@ -10,11 +10,16 @@
   border: 1px solid $color-default-white;
   box-shadow: 0px 2px 6px rgba(0, 0, 0, .15);
   transition: border $default-transition-settings;
-  cursor: pointer;
+  outline: none;
 
-  &:hover {
-    border: 1px solid $color-alizarin;
+  @media (hover: hover), screen and (min-width: 0\0) {
+
+    &:hover,
+    &:focus {
+      border: 1px solid $color-alizarin;
+    }
   }
+  
 
   &__text {
     display: flex;
