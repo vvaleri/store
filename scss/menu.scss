@@ -7,6 +7,7 @@
   padding: 40px 0 0 0;
   font-family: Open Sans, sans-serif;
   background-color: $color-ghost-white;
+  z-index: 5;
 
   @include viewport--md {
     min-width: 104px;

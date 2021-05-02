@@ -53,6 +53,10 @@ main {
   @include viewport--md {
     margin: 0 0 0 104px;
   }
+
+  @include viewport--sm {
+    padding: 0 20px;
+  }
 }
 
 .main-content {
@@ -63,6 +67,7 @@ main {
   padding-top: 40px;
   padding-bottom: 20px;
   margin-bottom: -20px;
+  // margin-top: 200px;
   
 
   &.active {
