@@ -52,12 +52,20 @@
       outline: none;
 
       @include viewport--sm {
-        padding: 0 0 0 5px;
+        padding: 0 0 0 15px;
         background-image: none;
       }
 
       &:focus {
         border: 1px solid $color-dim-gray;
+      }
+
+      &::placeholder {
+        color: $color-nobel;
+
+        @include viewport--sm {
+          font-size: 12px;
+        }
       }
     }
   }
@@ -73,9 +81,9 @@
       padding-left: 200px;
     }
 
-    // @include viewport--sm {
-    //   padding-left: 150px;
-    // }
+    @include viewport--sm {
+      padding-left: 90px;
+    }
     
     .header__title {
       display: none;

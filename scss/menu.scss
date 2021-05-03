@@ -14,6 +14,11 @@
     padding: 0;
   }
 
+  @include viewport--sm {
+    min-width: 10px;
+    transform: translateX(-20px);
+  }
+
   &__head {
     display: flex;
     margin: 0 0 55px 0;
@@ -22,7 +27,6 @@
 
     @include viewport--md {
       margin: 0;
-     
     }
   }
 
@@ -35,6 +39,10 @@
       margin: 40px 0 70px;
     }
 
+    @include viewport--sm {
+      display: none;
+    }
+
     span {
       margin: 0 0 0 10px;
       text-transform: uppercase;
@@ -42,6 +50,9 @@
 
       @media(max-width:768px) {
         display: none;
+        margin: 0 0 0 5px;
+        font-size: 14px;
+        line-height: 21px;
       }
     }
 
@@ -49,8 +60,14 @@
       @include viewport--md {
         width: 25px;
         height: 25px;
-       
+        margin-top: 5px;
       }
+    }
+  }
+
+  &__category {
+    @include viewport--sm {
+      width: 12px;
     }
   }
 
@@ -59,13 +76,6 @@
 
     @include viewport--md {
       margin: 0 25px 0 0;
-
-      &.active {
-
-        .link-menu__text {
-          display: flex;
-        }
-      }
     }
   }
 
@@ -98,7 +108,6 @@
 
     @include viewport--md {
       display: block;
-      
     }
   }
 
@@ -120,7 +129,6 @@
         width: 26px;
         height: 2px;
         background-color: $color-nero;
-    
       }
     
       &::before {
@@ -147,22 +155,65 @@
         display: none;
       }
     }
+  }
 
+  &.active {
+    transform: translateX(0px);
+
+    .menu__logo {
+      display: flex;
+
+      span {
+        display: flex;
+      }
+    }
+  
+    .link-menu__text {
+      display: flex;
+    }
+
+    .menu__category {
+      width: 100%;
+    }
   }
 }
 
 .link-menu {
   display: flex;
   align-items: center;
+  outline: none;
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+
+    &:hover,
+    &:focus {
+
+      .link-menu__icon {
+        stroke: $color-sky;
+      }
+
+      .link-menu__text {
+        color: $color-sky;
+      }
+    }
+  }
 
   &__icon {
     margin: 0 10px 0 0;
     stroke: $color-default-black;
+
+    transition: stroke $default-transition-settings;
+
+    @include viewport--sm {
+      display: none;
+    }
   }
 
   &__text {
     font-weight: 600;
     line-height: 22px;
+
+    transition: color $default-transition-settings;
 
     @include viewport--md {
       display: none;

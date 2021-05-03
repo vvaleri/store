@@ -18,6 +18,10 @@ body {
   width: 100%;
   height: 100%;
   font-family: $font-family--roboto;
+
+  &.lock {
+    overflow: hidden;
+  }
 }
 
 a {
@@ -56,6 +60,7 @@ main {
 
   @include viewport--sm {
     padding: 0 20px;
+    margin: 0 0 0 20px;
   }
 }
 
@@ -67,8 +72,6 @@ main {
   padding-top: 40px;
   padding-bottom: 20px;
   margin-bottom: -20px;
-  // margin-top: 200px;
-  
 
   &.active {
     display: flex;
