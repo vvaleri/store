@@ -57,6 +57,8 @@ body {
 
 body.lock {
   overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
 }
 
 a {
@@ -83,6 +85,13 @@ main {
           flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+}
+
+.wrapper.active .main,
+.wrapper.active .header {
+  -webkit-transform: translateX(100px);
+      -ms-transform: translateX(100px);
+          transform: translateX(100px);
 }
 
 .container {
@@ -538,6 +547,12 @@ main {
 }
 
 @media (max-width: 426px) {
+  .wrapper.active .header {
+    -webkit-transform: translateX(150px);
+        -ms-transform: translateX(150px);
+            transform: translateX(150px);
+  }
+
   .container {
     padding: 0 20px;
     margin: 0 0 0 20px;

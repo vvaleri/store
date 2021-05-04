@@ -21,6 +21,7 @@ body {
 
   &.lock {
     overflow: hidden;
+    touch-action: none;
   }
 }
 
@@ -43,6 +44,20 @@ main {
   flex-direction: column;
   min-height: 100vh;
   overflow: hidden;
+
+  &.active {
+
+    .main,
+    .header {
+      transform: translateX(100px);
+    }
+
+    .header {
+      @include viewport--sm {
+        transform: translateX(150px);
+      }
+    }
+  }
 }
 
 
