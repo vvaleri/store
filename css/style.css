@@ -187,6 +187,39 @@ main {
   position: absolute;
   top: 0;
   left: 100%;
+  max-height: 106px;
+}
+
+.menu__button img {
+  pointer-events: none;
+}
+
+.menu__button.active .menu__burger::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 8px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  -o-transition: transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.menu__button.active .menu__burger::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 9px;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  -o-transition: transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.menu__button.active .menu__burger span {
+  display: none;
 }
 
 .menu__burger {
@@ -492,34 +525,6 @@ main {
     bottom: 0;
   }
 
-  .menu__burger.active::before {
-    -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
-            transform: rotate(45deg);
-    top: 8px;
-    -webkit-transition: -webkit-transform .3s;
-    transition: -webkit-transform .3s;
-    -o-transition: transform .3s;
-    transition: transform .3s;
-    transition: transform .3s, -webkit-transform .3s;
-  }
-
-  .menu__burger.active::after {
-    -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-            transform: rotate(-45deg);
-    bottom: 9px;
-    -webkit-transition: -webkit-transform .3s;
-    transition: -webkit-transform .3s;
-    -o-transition: transform .3s;
-    transition: transform .3s;
-    transition: transform .3s, -webkit-transform .3s;
-  }
-
-  .menu__burger.active span {
-    display: none;
-  }
-
   .link-menu__text {
     display: none;
   }
@@ -547,6 +552,12 @@ main {
 }
 
 @media (max-width: 426px) {
+  .wrapper.active .main {
+    -webkit-transform: translateX(120px);
+        -ms-transform: translateX(120px);
+            transform: translateX(120px);
+  }
+
   .wrapper.active .header {
     -webkit-transform: translateX(150px);
         -ms-transform: translateX(150px);

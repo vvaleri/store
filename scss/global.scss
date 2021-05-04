@@ -52,6 +52,12 @@ main {
       transform: translateX(100px);
     }
 
+    .main {
+      @include viewport--sm {
+        transform: translateX(120px);
+      }
+    }
+
     .header {
       @include viewport--sm {
         transform: translateX(150px);

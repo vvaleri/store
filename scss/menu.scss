@@ -105,9 +105,36 @@
     position: absolute;
     top: 0;
     left: 100%;
+    max-height: 106px;
 
     @include viewport--md {
       display: block;
+    }
+
+    img {
+      pointer-events: none;
+    }
+
+    &.active {
+
+      .menu__burger {
+
+        &::before {
+          transform: rotate(45deg);
+          top: 8px;
+          transition: transform .3s;
+        }
+  
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 9px;
+          transition: transform .3s;
+        }
+  
+        span {
+          display: none;
+        }
+      }
     }
   }
 
@@ -137,22 +164,6 @@
     
       &::after {
         bottom: 0;
-      }
-
-      &.active::before {
-        transform: rotate(45deg);
-        top: 8px;
-        transition: transform .3s;
-      }
-
-      &.active::after {
-        transform: rotate(-45deg);
-        bottom: 9px;
-        transition: transform .3s;
-      }
-
-      &.active span {
-        display: none;
       }
     }
   }

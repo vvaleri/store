@@ -1,4 +1,4 @@
-const buttonMenu = document.querySelector('.menu__burger');
+const buttonMenu = document.querySelector('.menu__button');
 const menuContent = document.querySelector('.menu');
 const mainContent = document.querySelector('.wrapper');
 
